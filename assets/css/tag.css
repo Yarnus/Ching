@@ -1,0 +1,21 @@
+#header h1 {
+    position: relative;
+}
+
+#header h1:before {
+    content: "#";
+    color: #42b983 ;
+    position: absolute;
+    left: -1.3rem;
+}
+
+#archive .post-list {
+    padding: 0;
+}
+
+#archive .post-list .post-item {
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 5px;
+    list-style-type: none;
+}

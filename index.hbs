@@ -1,0 +1,48 @@
+{{!< default}}
+
+{{#contentFor "bigTitle"}}
+<a href="/">
+    <h1>{{@blog.title}}</h1>
+    <p></p>
+</a>
+{{/contentFor}}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
+
+<section id="about">
+    <p>{{{@blog.description}}}</p>
+    <p></p>
+</section>
+
+<section id="tags">
+    <span class="h2">Tags</span>
+    <div class="tagcloud"></div>
+</section>
+
+<section id="writing">
+    <span class="h1">
+        <a>Writing</a>
+    </span>
+
+    <ul class="post-list">
+        {{#foreach posts}}
+        <li class="post-item">
+            <div class="meta">
+                <time datetime="{{date format="MMM DD, YYYY"}}" itemprop="datePublished">{{date format="MMM DD, YYYY"}}</time>
+            </div>
+            <span>
+                <a class="post-item-list" href="{{url}}">{{title}}</a>
+            </span>
+            {{!-- <span>
+                <div class="article-tag">
+                    <i class="fa fa-tag"></i>
+                    {{>#foreach tags}}
+                    <a class="tag-link" href="{{url}}">{{name}}</a>{{#unless @last}}, {{/unless}}
+                    {{>/foreach}}
+                </div>
+            </span> --}}
+        </li>
+        {{/foreach}}
+    </ul>
+    {{pagination}}
+</section>

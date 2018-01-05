@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> {{!-- Page Meta --}}
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{meta_title}}</title>
+
+    <link rel="stylesheet" type="text/css" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {{!-- Import Highlightjs for Code --}}
+    <link href="https://cdn.bootcss.com/highlight.js/8.0/styles/github.min.css" rel="stylesheet">  
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
+
+    {{{block "customHeader"}}}
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+    <div class="content index width mx-auto px2 my4">
+        <header id="header">
+            {{{block "bigTitle"}}}
+            <div id="nav">
+            {{navigation}}
+            </div>
+        </header>
+
+        {{{body}}}
+    </div>
+
+    <footer id="footer">
+        <div class="footer-left"> Copyright © 2017 Theme by <a href="https://github.com/Lfcyme/Ching">Ching</a> </div>
+        <div class="footer-right">
+            <nav>
+                <ul>
+                    {{navigation}}
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="{{asset "js/jquery-3.2.1.js"}}"></script>
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+
+    {{{block "scripts"}}}
+    {{!-- Let Highlightjs go --}}
+    <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script> 
+    <script >hljs.initHighlightingOnLoad();</script>  
+</body>
+
+</html>

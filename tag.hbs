@@ -1,0 +1,41 @@
+{{!< default}}
+
+{{#contentFor "customHeader"}}
+<link rel="stylesheet" type="text/css" href="{{asset "css/tag.css"}}">
+{{/contentFor}}
+
+{{#contentFor "bigTitle"}}
+<a href="{{tag.url}}">
+    <h1>{{tag.name}}</h1>
+    <p></p>
+</a>
+{{/contentFor}}
+
+<section id="about">
+    <p>{{tag.description}}</p>
+    <p></p>
+</section>
+
+<div id="archive">
+    <ul class="post-list">
+        <h2>Writing</h2>
+        {{#foreach posts}}
+        <li class="post-item">
+            <div class="meta">
+                <time datetime="{{date format="MMM DD, YYYY"}}" itemprop="datePublished">{{date format="MMM DD, YYYY"}}</time>
+            </div>
+            <span>
+                <a class="post-item-list" href="{{url}}">{{title}}</a>
+            </span>
+            <span>
+                <div class="article-tag">
+                    <i class="fa fa-tag"></i>
+                    {{#foreach tags}}
+                    <a class="tag-link" href="{{url}}">{{name}}</a>
+                    {{/foreach}}
+                </div>
+            </span>
+        </li>
+        {{/foreach}}
+    </ul>
+</div>
