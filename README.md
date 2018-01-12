@@ -1,5 +1,7 @@
 # Ching
-A simple ghost theme based on others.Hope you like it.
+A simple ghost theme based on [Wonderland](https://github.com/dyzdyz010/wonderland).Hope you like it.
+
+
 
 ## Log
 - [x] fixed and update
