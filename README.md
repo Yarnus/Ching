@@ -1,7 +1,5 @@
 # Ching
-A simple ghost theme based on [Wonderland](https://github.com/dyzdyz010/wonderland).Hope you like it.
-
-
+- No longer maintained.( Welcome to Hexo
 
 ## Log
 - [x] fixed and update
